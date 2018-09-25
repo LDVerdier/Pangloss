@@ -1,10 +1,20 @@
 from classespangloss import *
+import pickle
 
-listemots=[]
+"""récupère le contenu de la sauvegarde """
+
+liste=['0','1']
+
+with open('save.txt','rb') as data:
+        depickler=pickle.Unpickler(data)
+        liste=depickler.load()
+
+
 def debut():
 
     """message de bienvenue"""
     print("Bienvenue dans Pangloss !")
+    
 
 def invite():
 
@@ -32,13 +42,15 @@ def invite():
             while i==0:
                 
                 newmot=input("Saisir le nouveau mot : ")
-                i=verifsaisie(newmot)
-            print(newmot, " a été enregistré")
+                i=verifsaisie(newmot)  # verifie que la saisie est conforme
             
-    #ajout d'un nouveau mot à la liste des entrées
-           # listemots.append((Entree()))
-           # listemots[(len(listemots)-1)].ortho=saisiealpha()
-           # print(listemots[(len(listemots)-1)].ortho, "a été ajouté à la base")
+            liste.append('0')           # ajoute un objet à la liste
+            liste[len(liste)-1]=newmot   # assigne la saisie à cet objet (dernier créé)
+            with open('save.txt','wb') as data:  # sauvegarde (ecrase)  la liste
+                pickler=pickle.Pickler(data)
+                pickler.dump(liste)
+            print(newmot, " a été enregistré.")
+                
             invite()
         elif choix==2:
             print("en cours")
