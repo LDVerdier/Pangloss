@@ -1,6 +1,6 @@
--Levée d’exceptions (pour forcer saisie de texte/chiffre) - DONE
+- Levée d’exceptions (pour forcer saisie de texte/chiffre) - DONE
 
--Enregistrement dans un fichier - en cours
+- Enregistrement dans un fichier - en cours
 
 - création d'un fichier de sauvegarde, contenant un seul objet : la liste contenant toutes les instances de la classe Entree.
 
