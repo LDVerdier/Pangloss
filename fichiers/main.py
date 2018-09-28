@@ -2,4 +2,4 @@ from interface import *
 
 
 debut()
-invite()
+invite(int(0))
