@@ -8,6 +8,6 @@
 
 - création d'une fonction permettant de sauvegarder une nouvelle entrée dans la liste DONE
 
-- création d'une fonction permettant de rechercher une entrée dans la liste
+- création d'une fonction permettant de rechercher une entrée dans la liste DONE
 
-- création d'une fonction permettant de supprimer une entrée de la liste (fonction remove :liste.remove('0'))
+- création d'une fonction permettant de supprimer une entrée de la liste (fonction remove :liste.remove('0')) DONE
