@@ -1,5 +1,5 @@
 from classespangloss import *
-import pickle
+#import picle (non nécessaire car importé dans classespangloss)
 
 ###############################################
 
