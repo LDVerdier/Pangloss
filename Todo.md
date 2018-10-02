@@ -13,3 +13,7 @@
 - création d'une fonction permettant de supprimer une entrée de la liste (fonction remove :liste.remove('0')) DONE
 
 - création d'un prototype de classe Entree() (cf Entree.md)  liste.append(Entree())
+
+- implémentation de la classe Entree dans l'interface
+
+- pas urgent : création de hard save, fonction d'import d'une save avec dédoublonnage
