@@ -5,11 +5,15 @@ from classespangloss import *
 
 """récupère le contenu de la sauvegarde """
 
-liste=['0','1']
-
-with open('save.txt','rb') as data:
+liste=[]
+try:
+    with open('save.txt','rb') as data:
         depickler=pickle.Unpickler(data)
         liste=depickler.load()
+
+except:
+    pass
+
 ###############################################
 
 def debut():
