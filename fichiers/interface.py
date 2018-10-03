@@ -117,10 +117,36 @@ def recherche():
         
         motrech=input("Saisir le mot à rechercher : ")
         i=verifsaisie(motrech)  # verifie que la saisie est conforme
-    rang=0
-    while rang<len(liste):
+
+    # création d'une liste de toutes les orthographes    
+    j=0
+    k=0
+    liste_ortho=[]
+    while j<len(liste):
+        while k<len(liste[j].ortho):
+            liste_ortho.append(liste[j].ortho[k])
+            k=k+1
+        j=j+1
+        k=0
+    # comparaison du mot recherché à chacun des éléments de la liste d'orthographes
+    liste_result=[]
+    m=0
+    while m < len(liste_ortho):
+        if motrech == liste_ortho[m]:
+            liste_result.append(m)
+        m=m+1
+
+    if len(liste_result) == 0:
+        print("pas trouvé")
+    else:
+        print("trouvé", len(liste_result),"fois")
         
-    if motrech in liste:
+    """for mot in liste_ortho:
+        if motrech in liste_ortho:
+            print('trouvé')"""
+        
+        
+    """if motrech in liste:
         print("Le mot ", motrech," a été trouvé en position",liste.index(motrech),".")
         reponse=input("Voulez-vous le supprimer ? o / n : ")
         while reponse is not 'o' and reponse is not 'n':
@@ -137,7 +163,7 @@ def recherche():
         if reponse is "o":
             save(motrech)
         elif reponse is "n":
-            print("Ah, on ne l'ajoute pas.")
+            print("Ah, on ne l'ajoute pas.")"""
     invite()
 
 ###############################################
