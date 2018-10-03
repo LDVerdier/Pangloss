@@ -24,3 +24,26 @@ V3 : DONE
 V4 :
 . methode permettant de rechercher une entree par son id_number
 . message d'erreur si l'entree n'existe plus
+
+ajout de mot :
+
+saisir le mot -> enregistré dans "mot"
+saisir la traduction => enregistré dans "traduction"
+création de la nouvelle entrée et sauvegarde
+
+recherche de mot :
+créer une liste_ortho contenant toutes les ortho de chaque entrée
+
+
+liste_ortho = []
+i=0
+j=0
+while i<len(liste):
+	
+	while j<len(liste[i].ortho):
+		liste_ortho.append(liste[i].ortho)
+		j=j+1
+	i=i+1
+	j=0
+
+comparer motrech à liste_ortho
