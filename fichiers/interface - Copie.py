@@ -86,23 +86,16 @@ def ajout():
         newmot=input("Saisir le nouveau mot : ")
         i=verifsaisie(newmot)  # verifie que la saisie est conforme
     
-    i=0
-    while i==0:
-
-        traduction=input("Saisir la traduction : ")
-        i=verifsaisie(traduction)
-
-    print("Vous avez saisi : ",newmot,"avec pour traduction : ",traduction,".")
-    
-    #print("Vous avez saisi : ", newmot)
+               
+    print("Vous avez saisi : ", newmot)
     verif=input("Voulez-vous le sauvegarder ? o/n ")
     while verif is not 'o' and verif is not 'n':
             verif=input("Répondez o pour Oui et n pour Non. ")
     if verif is "o":
-        save(newmot, traduction)
-        print("Mot enregistré.") 
+        save(newmot)
+        print(newmot, " a été enregistré.") 
     elif verif is "n":
-        print("Mot non enregistré.")
+        print(newmot, " n'a pas été enregistré.")
     
     invite()
 
@@ -117,9 +110,6 @@ def recherche():
         
         motrech=input("Saisir le mot à rechercher : ")
         i=verifsaisie(motrech)  # verifie que la saisie est conforme
-    rang=0
-    while rang<len(liste):
-        
     if motrech in liste:
         print("Le mot ", motrech," a été trouvé en position",liste.index(motrech),".")
         reponse=input("Voulez-vous le supprimer ? o / n : ")
@@ -162,10 +152,11 @@ def suppression(motrech):
     print(motrech, "a été supprimé.")
 
 
-def save(newmot, traduction):
+def save(newmot):
     
     """Ajoute le mot dans la base et enregistre."""
-    liste.append(Entree(newmot,traduction))
+
+    liste.append(newmot)
     with open('save.txt','wb') as data:   
         pickler=pickle.Pickler(data)
         pickler.dump(liste)
