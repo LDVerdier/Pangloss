@@ -27,10 +27,10 @@ class Entree : # Définition de notre classe Personne
         self.defin = [traduction]
         self.registre='courant'
         Entree.id_number += 1
-        id_number=Entree.id_number
+        self.id_number=Entree.id_number
         with open('save_id.txt','wb') as data:
             pickler=pickle.Pickler(data)
-            pickler.dump(id_number)
+            pickler.dump(self.id_number)
 
     
         
