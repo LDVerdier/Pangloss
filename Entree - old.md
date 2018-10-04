@@ -24,7 +24,14 @@ V3 : DONE
 V4 :
 . fonction Recherche permettant de rechercher présence d'un mot DONE
 . message d'erreur si l'entree n'existe pas DONE
-. afficher chaque résultat et sa trad
+
+V5 :
+. fonction de création d'une liste des id
+
+V6 :
+. fonction affiche() qui montre affiche l'orthographe, la traduction, l'ID
+
+V7 :
 . proposer de modifier / ajouter / supprimer une entrée / une trad
 
 
