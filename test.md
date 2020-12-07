@@ -1,8 +1,9 @@
 # Premier titre
 
-Une _**expression en gras**_.
+[un lien vers wikipedia](https://wikipedia.org "wikipedia")
+[un autre lien vers google][trucmuche]
 
-~~une phrase barrée~~
+[trucmuche]: https://www.google.com
 
 1. premier item
     1. sous item
