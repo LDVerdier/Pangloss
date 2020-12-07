@@ -1,5 +1,15 @@
 # Premier titre
 
+|colonne 1|colonne 2|colonne 3|
+|----|----:|:----:|
+|a|b|c|
+
+
+un `bout de code` dans ma phrase
+```javascript
+var truc = "machin";
+```
+
 [un lien vers wikipedia](https://wikipedia.org "wikipedia")
 
 [un autre lien vers google][trucmuche]
