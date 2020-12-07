@@ -1,9 +1,14 @@
 # Premier titre
 
 [un lien vers wikipedia](https://wikipedia.org "wikipedia")
+
 [un autre lien vers google][trucmuche]
 
-[trucmuche]: https://www.google.com
+[trucmuche]: https://www.google.com (google)
+
+et un [lien vers mozilla]
+
+[lien vers mozilla]: https://mozilla.org
 
 1. premier item
     1. sous item
